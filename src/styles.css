@@ -1,1 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+    background-color: rgb(241, 242, 243)
+}
+
+.success-text{
+    color : #92e3a9;
+}
+
+.failure-text{
+    color : #ff725e;
+}
+
+
+.first-screen{
+    color : #00bdc2;
+}
