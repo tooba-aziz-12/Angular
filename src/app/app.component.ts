@@ -14,6 +14,10 @@ export class AppComponent implements OnInit {
 
   public data = null;
 
+  public error : any;
+
+  public isURLReachable : boolean = false;
+
   constructor(private pullDataService: PulldataService) { }
 
   ngOnInit() {
@@ -23,8 +27,14 @@ export class AppComponent implements OnInit {
   public callGetData() {
     const secondsCounter = interval(500);
     secondsCounter.subscribe(n =>
-    this.pullDataService.getData().subscribe(o => {
-      this.data = o;
+    this.pullDataService.getData().subscribe(res => {
+      this.data = res;
+      this.isURLReachable=false;
+    },
+    err =>{
+      console.log("inside error");
+        this.isURLReachable=true;
+        this.error = "URL not reachable";
     })
     );
   }

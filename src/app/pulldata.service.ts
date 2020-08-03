@@ -1,5 +1,8 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
+import {AppConstants} from './app-constants';
+
+
 
 @Injectable({
   providedIn: 'root'
@@ -10,7 +13,11 @@ export class PulldataService {
     
   }
 
+  public error = null;
+
   public getData() {
-    return this.http.get("http://localhost:8080/test");
+
+    return this.http.get(AppConstants.API_ENDPOINT);
+
   }
 }

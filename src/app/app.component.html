@@ -12,11 +12,11 @@
           <app-nodata></app-nodata>
         </ng-template>
       </span>
-    </div>
+    </div>   
+    <div class="col-md-12"class="text-muted" class="red-square" *ngIf="isURLReachable">
+      <small>
+         {{error}}
+      </small>
   </div>
-  <!-- <div class="row justify-content-center">
-    <div class="col-md">
-      <button class="btn btn-default" (click)="callGetData()">Update</button>
-    </div>
-  </div> -->
+  </div>
 </div>

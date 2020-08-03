@@ -15,3 +15,13 @@ body {
 .first-screen{
     color : #00bdc2;
 }
+.red-square {
+    background-color: #ff725e;
+    width: 150px;
+    height: 30px;
+    position: absolute;
+    text-align: center;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
